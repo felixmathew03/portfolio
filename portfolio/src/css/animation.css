@@ -1,0 +1,36 @@
+
+@keyframes fadeInn {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+/* Define the fade-in animation */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Apply the fade-in effect */
+.skill-item {
+  opacity: 0;
+}
+
+.skill-item.visible {
+  opacity: 1;
+  animation: fadeIn 1s forwards;
+}
+
+/* Optional: Add delay based on index using a custom class, if needed */
+.skill-item {
+  transition: opacity 1s ease-out;
+}
