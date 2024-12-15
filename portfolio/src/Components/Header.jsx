@@ -22,6 +22,9 @@ const Header = () => {
               <a href="#projects" className="hover:text-yellow-400 transition-colors">Projects</a>
             </li>
             <li>
+              <a href="#education" className="hover:text-yellow-400 transition-colors">Education</a>
+            </li>
+            <li>
               <a href="#contact" className="hover:text-yellow-400 transition-colors">Contact</a>
             </li>
           </ul>
@@ -57,6 +60,9 @@ const Header = () => {
             </li>
             <li>
               <a href="#projects" className="block text-white hover:text-yellow-400 transition-colors">Projects</a>
+            </li>
+            <li>
+              <a href="#education" className="hover:text-yellow-400 transition-colors">Education</a>
             </li>
             <li>
               <a href="#contact" className="block text-white hover:text-yellow-400 transition-colors">Contact</a>

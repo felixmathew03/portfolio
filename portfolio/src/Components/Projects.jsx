@@ -16,7 +16,7 @@ const Projects = () => {
             <div className="p-4">
               <h3 className="text-xl font-semibold text-white mb-2">Instagram Clone (MERN Stack)</h3>
               <p className="text-gray-400 mb-4 text-sm">
-                A full-stack Instagram clone built using the MERN (MongoDB, Express, React, Node.js) stack. Users can create accounts, post images, like and comment on posts, and follow other users.
+                A full-stack Instagram clone built using the MERN (MongoDB, Express, React, Node.js) stack. Users can create accounts, post images, and like on posts.
               </p>
               <a
                 href="#"
@@ -32,12 +32,12 @@ const Projects = () => {
             <img
               src="https://via.placeholder.com/300x180"
               alt="OLX Clone"
-              className="w-full h-48 object-cover transition-transform duration-300 transform "
+              className="w-full h-48 object-cover transition-transform duration-300 transform"
             />
             <div className="p-4">
-              <h3 className="text-xl font-semibold text-white mb-2">OLX Clone </h3>
+              <h3 className="text-xl font-semibold text-white mb-2">OLX Clone</h3>
               <p className="text-gray-400 mb-4 text-sm">
-                A classified ad platform built with MongoDB, Express, Node.js, HTML, and CSS. Users can post and browse ads for products and services. Admin panel for managing listings and users.
+                This project is an OLX clone that allows users to buy and sell products. Users can upload items they wish to sell, and others can browse and purchase these products. The platform uses MongoDB, Node.js, Express, HTML, CSS, and JavaScript.
               </p>
               <a
                 href="#"
@@ -48,6 +48,7 @@ const Projects = () => {
             </div>
           </div>
 
+
           {/* Project 3 - BookMyShow Clone */}
           <div className="bg-gray-800 rounded-lg overflow-hidden w-full sm:w-80 md:w-96 transform transition-all duration-500 ease-in-out hover:scale-105 hover:shadow-2xl hover:bg-gray-700">
             <img
@@ -56,9 +57,9 @@ const Projects = () => {
               className="w-full h-48 object-cover transition-transform duration-300 transform "
             />
             <div className="p-4">
-              <h3 className="text-xl font-semibold text-white mb-2">BookMyShow Clone </h3>
+              <h3 className="text-xl font-semibold text-white mb-2">BookMyShow Clone</h3>
               <p className="text-gray-400 mb-4 text-sm">
-                A movie ticket booking platform built with MongoDB, Express,  Node.js, HTML, and CSS. Users can browse movies, check showtimes, and book tickets for available slots.
+                This is a clone of the BookMyShow platform, featuring a user-friendly interface. Users can browse and add movies, view detailed information about each movie, and explore showtimes. The platform is built with MongoDB, Node.js, Express, HTML, CSS, and JavaScript.
               </p>
               <a
                 href="#"
@@ -67,6 +68,7 @@ const Projects = () => {
                 View Project
               </a>
             </div>
+
           </div>
         </div>
       </div>

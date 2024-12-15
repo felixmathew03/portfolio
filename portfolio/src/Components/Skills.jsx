@@ -1,6 +1,6 @@
+// src/components/Skills.js
 import React, { useEffect, useState } from 'react';
 
-// List of skills, each with a color.
 const Skills = () => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -29,18 +29,18 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className={`py-20 bg-gradient-to-r from-gray-100 to-white h-screen flex items-center text-black transition-opacity duration-1000 ${
+      className={`py-20 bg-gradient-to-r from-[#2d3748] to-[#1a202c] h-screen flex items-center text-white transition-opacity duration-1000 ${
         isVisible ? 'opacity-100' : 'opacity-0'
       }`}
     >
       <div className="container mx-auto px-6 text-center">
         {/* Title */}
-        <h2 className="text-5xl font-extrabold text-black mb-6">
+        <h2 className="text-5xl font-extrabold text-white mb-6">
           My Technical <span className="text-yellow-400">Skills</span>
         </h2>
 
         {/* Description */}
-        <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8">
+        <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-gray-300">
           As a Full-Stack Developer, I have hands-on experience with a wide range of technologies. 
           Below are some of the core technologies that I work with:
         </p>
