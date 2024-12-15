@@ -11,10 +11,10 @@ const Contact = () => {
         </p>
         
         {/* Horizontally Aligned Contact Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-4 sm:grid-cols-2 md:grid-cols-2 gap-8">
 
           {/* Email Section */}
-          <div className="flex items-center justify-center bg-gray-800 dark:bg-gray-700 p-6 rounded-lg shadow-lg transition-all duration-500 hover:opacity-90">
+          <div className="flex items-center justify-center  bg-gray-800 dark:bg-gray-700 p-6 rounded-lg shadow-lg transition-all duration-500 hover:opacity-90">
             <div className="flex flex-col items-center gap-3">
               <FaEnvelope className="text-blue-400 w-8 h-8 transition-transform duration-500 transform hover:scale-110 hover:rotate-3 hover:transform-origin-center" />
               <p className="text-white dark:text-white">

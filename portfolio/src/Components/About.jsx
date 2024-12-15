@@ -26,7 +26,7 @@ const About = () => {
           <img
             src="images/me.jpg"
             alt="Felix Mathew"
-            className="rounded-full border-4 border-sky-400 shadow-xl w-48 h-64 object-cover hover:shadow-lg hover:shadow-[#e2e8f0] md:w-64 md:h-76"
+            className="rounded-full  bg-gray-100  bg-opacity-90 border-4 border-sky-400 shadow-xl w-48 h-64 object-contain hover:shadow-lg  md:w-64 md:h-76"
           />
         </div>
 

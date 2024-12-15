@@ -63,7 +63,7 @@ const Skills = () => {
         </p>
 
         {/* Skills Grid */}
-        <div className="w-full grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="lg:w-3/5 sm:w-full md:w-full m-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-6">
           {skillsWithLogos.map((skill, index) => (
             <div
               key={index}

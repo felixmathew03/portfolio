@@ -19,6 +19,9 @@ const Header = () => {
               <a href="#about" className="hover:text-yellow-400 transition-colors">About</a>
             </li>
             <li>
+              <a href="#skills" className="hover:text-yellow-400 transition-colors">Skills</a>
+            </li>
+            <li>
               <a href="#projects" className="hover:text-yellow-400 transition-colors">Projects</a>
             </li>
             <li>
@@ -57,6 +60,9 @@ const Header = () => {
           <ul className="space-y-4">
             <li>
               <a href="#about" className="block text-white hover:text-yellow-400 transition-colors">About</a>
+            </li>
+            <li>
+              <a href="#skills" className="hover:text-yellow-400 transition-colors">Skills</a>
             </li>
             <li>
               <a href="#projects" className="block text-white hover:text-yellow-400 transition-colors">Projects</a>
