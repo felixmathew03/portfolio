@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { FaLaptopCode, FaUniversity, FaSchool } from 'react-icons/fa'; // Importing React Icons
-import '../css/animation1.css'; // Assuming custom animations are in this file
-
 const Education = () => {
   const [isVisible, setIsVisible] = useState(false);
 

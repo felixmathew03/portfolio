@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 const Para = () => {
-  const text = `I'm a passionate web developer with a strong foundation in front-end technologies like React and Tailwind CSS. I believe in crafting clean, efficient, and user-friendly web applications. With a focus on performance, accessibility, and modern design, I'm always looking to learn and explore new technologies.`;
-  
+  const text = "I'm a MERN stack developer and BCA graduate with expertise in MongoDB, Express, React, and Node.js. I focus on building scalable, performant, and user-friendly web applications, with a keen interest in learning new technologies and enhancing development skills."
   const [displayedText, setDisplayedText] = useState('');
   const typingSpeed = 50; // Adjust typing speed here
 

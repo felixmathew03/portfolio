@@ -12,7 +12,7 @@ export default {
       },
       fontFamily: {
         sans: ['Roboto', 'sans-serif'],  // Custom font
-        ultra:["Ultra", "serif"]
+        ultra:["Oswald", "sans-serif"]
       },
     },
   },

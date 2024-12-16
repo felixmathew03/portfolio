@@ -15,7 +15,7 @@ const Skills = () => {
     { name: 'Tailwind CSS', logo: '/images/tailwind.svg', color: 'bg-teal-900' },
     { name: 'HTML', logo: '/images/html5.png', color: 'bg-orange-500' },
     { name: 'CSS', logo: '/images/css3.png', color: 'bg-blue-400' },
-    { name: 'C', logo: '/images/c.png', color: 'bg-blue-800' },
+    { name: 'AWS', logo: '/images/aws.svg', color: 'bg-blue-500' },
     { name: 'C++', logo: '/images/c++.png', color: 'bg-blue-600' },
     { name: 'SQL', logo: '/images/sql.png', color: 'bg-red-700' },
   ];
@@ -67,11 +67,13 @@ const Skills = () => {
           {skillsWithLogos.map((skill, index) => (
             <div
               key={index}
-              className={`skill-card text-white p-4 rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 ${skill.color} hover:bg-yellow-400 hover:text-black ${
+              className={`skill-card text-white p-4 rounded-lg shadow-lg transform transition-transform duration-300 ease-in-out hover:scale-105 ${skill.color} ${
                 isVisible ? 'skill-item visible' : 'skill-item'
               }`}
               style={{
-                animationDelay: `${index * 500}ms`, // Staggered fade-in delay
+                animationDelay: `${index * 300}ms`, // Staggered fade-in delay
+                opacity: isVisible ? 1 : 0, // Fade-in effect
+                transition: 'opacity 1s ease-in-out', // Smooth opacity transition
               }}
             >
               <div className="flex flex-col items-center justify-center h-full">
