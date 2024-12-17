@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { FaEnvelope, FaLinkedin, FaPhone } from 'react-icons/fa'; // Importing icons from react-icons
+import { FaEnvelope, FaLinkedin, FaPhone, FaGithub } from 'react-icons/fa'; // Importing GitHub icon
 import Para from './Para';
 import TypingText from './TypingText';
 
@@ -22,44 +22,52 @@ const About = () => {
       <div className="container mx-auto px-6 flex flex-col items-center justify-center">
         
         {/* Top Section: Profile Image and Contact Information */}
-        <div className="flex flex-col md:flex-row justify-center items-center mb-8 gap-6 bg-teal-50 p-8 rounded-lg shadow-xl transition-all duration-300 hover:bg-teal-100 hover:shadow-2xl">
+        <div className="flex flex-col  justify-center items-center mb-8 gap-6 bg-teal-50 p-8 rounded-lg shadow-xl transition-all duration-300 hover:bg-teal-100 hover:shadow-2xl">
           {/* Profile Image */}
           <img
             src="images/me.jpg"
             alt="Felix Mathew"
-            className="rounded-full bg-gray-100 bg-opacity-90 border-4 border-teal-400 shadow-xl w-48 h-48 object-cover object-top transition-transform duration-300 hover:scale-110 hover:shadow-2xl md:w-64 md:h-64"
+            className="rounded-full bg-gray-100 bg-opacity-90 border-4 border-teal-400 shadow-xl w-48 h-48 object-cover object-top duration-300  hover:shadow-2xl md:w-64 md:h-64"
           />
           
           {/* Contact Information */}
-          <div className="flex flex-col gap-4 items-start p-4">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-4">Contact Me</h3>
+          <div className="flex gap-4 items-center p-4">
             
             {/* Gmail */}
             <div className="flex items-center gap-2">
-              <FaEnvelope className="text-teal-500 text-xl" />
               <a href="mailto:your-email@gmail.com" className="text-teal-500 hover:text-teal-600 transition duration-300">
-                your-email@gmail.com
+                <FaEnvelope className="text-teal-800 text-3xl" />
               </a>
             </div>
 
             {/* LinkedIn */}
             <div className="flex items-center gap-2">
-              <FaLinkedin className="text-teal-500 text-xl" />
               <a
                 href="https://www.linkedin.com/in/your-linkedin-profile"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-teal-500 hover:text-teal-600 transition duration-300"
               >
-                LinkedIn Profile
+                <FaLinkedin className="text-teal-800 text-3xl" />
               </a>
             </div>
 
             {/* Phone Number */}
             <div className="flex items-center gap-2">
-              <FaPhone className="text-teal-500 text-xl" />
               <a href="tel:+1234567890" className="text-teal-500 hover:text-teal-600 transition duration-300">
-                +1 (234) 567-890
+                <FaPhone className="text-teal-800 text-3xl origin-center rotate-90" />
+              </a>
+            </div>
+
+            {/* GitHub */}
+            <div className="flex items-center gap-2">
+              <a
+                href="https://github.com/your-github-profile"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-teal-500 hover:text-teal-600 transition duration-300"
+              >
+                <FaGithub className="text-teal-800 text-3xl" />
               </a>
             </div>
           </div>

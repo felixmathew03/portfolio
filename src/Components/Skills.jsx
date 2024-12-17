@@ -16,7 +16,7 @@ const Skills = () => {
     { name: 'HTML', logo: '/images/html5.png', color: 'bg-orange-500' },
     { name: 'CSS', logo: '/images/css3.png', color: 'bg-blue-400' },
     { name: 'AWS', logo: '/images/aws.svg', color: 'bg-blue-500' },
-    { name: 'C++', logo: '/images/c++.png', color: 'bg-blue-600' },
+    { name: 'GitHub', logo: '/images/git.svg', color: 'bg-gray-400' },
     { name: 'SQL', logo: '/images/sql.png', color: 'bg-red-700' },
   ];
 
@@ -46,18 +46,18 @@ const Skills = () => {
     <section
       ref={sectionRef}
       id="skills"
-      className={`py-20 bg-gradient-to-r from-[#2d3748] to-[#1a202c] h-full flex items-center text-white transition-opacity duration-1000 ${
+      className={`py-20 bg-gradient-to-r from-[#a1ffce] to-[#faffd1] h-full flex items-center text-gray-800 transition-opacity duration-1000 ${
         isVisible ? 'opacity-100' : 'opacity-0'
       }`}
     >
       <div className="container mx-auto px-6 text-center">
         {/* Title */}
-        <h2 className="text-4xl sm:text-5xl font-extrabold text-white mb-6">
-          My Technical <span className="text-yellow-400">Skills</span>
+        <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-800 mb-6">
+          My Technical <span className="text-yellow-500">Skills</span>
         </h2>
 
         {/* Description */}
-        <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-gray-300">
+        <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-gray-600">
           As a Full-Stack Developer, I have hands-on experience with a wide range of technologies. 
           Below are some of the core technologies that I work with:
         </p>
