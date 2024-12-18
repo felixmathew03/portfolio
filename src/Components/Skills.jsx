@@ -67,7 +67,7 @@ const Skills = () => {
           {skillsWithLogos.map((skill, index) => (
             <div
               key={index}
-              className={`skill-card text-white p-6 rounded-full shadow-lg  transition-all duration-300 ease-in-out hover:shadow-2xl hover:bg-opacity-90 ${skill.color} ${
+              className={`skill-card text-white p-6 rounded-lg shadow-lg  transition-all duration-300 ease-in-out hover:shadow-2xl hover:bg-opacity-90 ${skill.color} ${
                 isVisible ? 'skill-item visible' : 'skill-item'
               }`}
               style={{

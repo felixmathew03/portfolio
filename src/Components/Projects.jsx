@@ -26,17 +26,18 @@ const Projects = () => {
           {/* Project 1 - Instagram Clone */}
           <div
             ref={instagramRef}
-            className={`flex flex-col lg:flex-row w-full justify-around transition-all duration-500 ease-in-out ${
+            className={` flex flex-col lg:flex-row items-center w-11/12 me-auto justify-between transition-all duration-500 ease-in-out ${
               instagramInView ? 'animate-slideUp' : 'opacity-0'
             }`}
           >
-            <div className="w-full lg:w-1/3 flex flex-col justify-center items-center transform translate-y-50 mb-6 lg:mb-0">
+            <div className="  bg-gradient-to-r from-[#e5d9f2] to-[#f6f4f0] bg-opacity450 p-8 rounded-e-full lg:w-7/12 flex flex-col justify-center items-center transform translate-y-50 mb-6 lg:mb-0">
               <h3 className="text-xl font-semibold bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] bg-clip-text text-transparent mb-2">
                 Instagram Clone (MERN Stack)
               </h3>
-              <p className="text-gray-900 mb-4 p-2 text-md">
-                A full-stack Instagram clone built using the MERN (MongoDB, Express, React, Node.js) stack. Users can create accounts, post images, and like on posts.
-              </p>
+              <p className="text-gray-900 mb-4 p-2  text-md">
+    A full-stack Instagram clone built using the MERN (MongoDB, Express, React, Node.js) stack. This social media platform allows users to create accounts, post images, and like posts, mimicking the core features of Instagram.
+</p>
+
               <a
                 href="#"
                 className="inline-block bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] text-white py-2 px-4 rounded-lg text-center"
@@ -48,7 +49,7 @@ const Projects = () => {
               <img
                 src="images/socialmedia.jpg"
                 alt="Instagram Clone"
-                className="w-full h-full object-cover duration-300"
+                className="w-full h-full me-7 object-cover duration-300"
               />
             </div>
           </div>
@@ -56,7 +57,7 @@ const Projects = () => {
           {/* Project 2 - OLX Clone (No React) */}
           <div
             ref={olxRef}
-            className={`flex flex-col lg:flex-row w-full justify-around transition-all duration-500 ease-in-out ${
+            className={`flex flex-col lg:flex-row items-center w-11/12 ms-auto justify-between transition-all duration-500 ease-in-out ${
               olxInView ? 'animate-slideUp' : 'opacity-0'
             }`}
           >
@@ -67,7 +68,7 @@ const Projects = () => {
                 className="w-full h-full object-cover duration-300"
               />
             </div>
-            <div className="w-full lg:w-1/3 flex flex-col justify-center items-center transform translate-y-50">
+            <div className="bg-gradient-to-r from-[#e5d9f2] to-[#f6f4f0] bg-opacity450 p-8 rounded-s-full lg:w-7/12 flex flex-col justify-center items-center transform translate-y-50">
               <h3 className="text-xl font-semibold text-blue-800 mb-2">OLX Clone</h3>
               <p className="text-gray-900 mb-4 p-2 text-md">
                 This project is an OLX clone that allows users to buy and sell products. Users can upload items they wish to sell, and others can browse and purchase these products. The platform uses MongoDB, Node.js, Express, HTML, CSS, and JavaScript.
@@ -84,11 +85,11 @@ const Projects = () => {
           {/* Project 3 - BookMyShow Clone */}
           <div
             ref={bookMyShowRef}
-            className={`flex flex-col lg:flex-row w-full justify-around transition-all duration-500 ease-in-out ${
+            className={`flex flex-col lg:flex-row items-center w-11/12 me-auto justify-between transition-all duration-500 ease-in-out ${
               bookMyShowInView ? 'animate-slideUp' : 'opacity-0'
             }`}
           >
-            <div className="w-full lg:w-1/3 flex flex-col justify-center items-center transform translate-y-50 mb-6 lg:mb-0">
+            <div className="bg-gradient-to-r from-[#e5d9f2] to-[#f6f4f0] bg-opacity450 p-8 rounded-e-full lg:w-7/12  flex flex-col justify-center items-center transform translate-y-50 mb-6 lg:mb-0">
               <h3 className="text-xl font-semibold text-red-700 mb-2">BookMyShow Clone</h3>
               <p className="text-gray-900 mb-4 p-2 text-md">
                 This is a clone of the BookMyShow platform, featuring a user-friendly interface. Users can browse and add movies, view detailed information about each movie, and explore showtimes. The platform is built with MongoDB, Node.js, Express, HTML, CSS, and JavaScript.

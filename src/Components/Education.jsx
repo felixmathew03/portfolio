@@ -22,60 +22,57 @@ const Education = () => {
       className="py-20 bg-gradient-to-r from-[#ffafbd] to-[#ffc3a0] text-gray-800 h-auto"
       style={animationStyle}
     >
-      <div className="container mx-auto px-6 max-w-screen-lg">
-        <h2 className="text-5xl font-extrabold text-gray-800 mb-12 text-center">
+      <div className="w-full px-6">
+        <h2 className="text-5xl font-bold text-gray-800 mb-12 text-center">
           My Education
         </h2>
 
-        {/* Education Cards with Enhanced Animations */}
-        <div className="flex flex-col gap-6">
+        {/* Education Cards in Grid Layout */}
+        <div className="w-full grid grid-cols-1 sm:grid-cols-1 gap-10">
           {/* MERN Stack Course */}
-          <div
-            className="bg-[#ffffff] text-[#2c3e50] p-6 rounded-lg border-2 border-[#ff7f7f] hover:cursor-pointer transition duration-300 hover:bg-[#ffe6e6]"
-          >
-            <div className="flex items-center mb-4">
-              <FaLaptopCode className="text-3xl mr-3 text-blue-600" />
-              <h3 className="text-2xl font-semibold">MERN Stack Course</h3>
+          <div className="bg-white w-2/3 m-auto p-6 rounded-lg shadow-md hover:shadow-2xl transition-all duration-300">
+            <div className="flex items-center mb-6">
+              <FaLaptopCode className="text-4xl text-blue-600 mr-4" />
+              <div>
+                <h3 className="text-2xl font-semibold text-gray-800">MERN Stack Course</h3>
+                <p className="text-sm text-gray-500">Completed: 2024</p>
+              </div>
             </div>
-            <p className="text-lg text-gray-600 mb-4">Solutions</p>
-            <p className="text-sm text-gray-500">Completed: 2024</p>
-            <p className="text-sm text-gray-500">
+            <p className="text-sm text-gray-500 mb-4">
               Major: Full-Stack Development (MongoDB, Express.js, React, Node.js)
             </p>
-            <p className="text-sm text-gray-500 mt-2">
+            <p className="text-sm text-gray-600">
               This intensive course covers everything from front-end to back-end development using the MERN stack. It is designed for aspiring developers looking to build modern web applications.
             </p>
           </div>
 
           {/* BCA (Bachelor of Computer Applications) */}
-          <div
-            className="bg-[#ffffff] text-[#2c3e50] p-6 rounded-lg  border-2 border-[#ff7f7f] hover:cursor-pointer transition duration-500 hover:bg-[#ffe6e6]"
-          >
-            <div className="flex items-center mb-4">
-              <FaUniversity className="text-3xl mr-3 text-green-600" />
-              <h3 className="text-2xl font-semibold">Bachelor of Computer Applications (BCA)</h3>
+          <div className="bg-white w-2/3 m-auto p-6 rounded-lg shadow-md hover:shadow-2xl transition-all duration-300">
+            <div className="flex items-center mb-6">
+              <FaUniversity className="text-4xl text-green-600 mr-4" />
+              <div>
+                <h3 className="text-2xl font-semibold text-gray-800">Bachelor of Computer Applications (BCA)</h3>
+                <p className="text-sm text-gray-500">Graduated: 2024</p>
+              </div>
             </div>
-            <p className="text-lg text-gray-600 mb-4">University</p>
-            <p className="text-sm text-gray-500">Graduated: 2024</p>
-            <p className="text-sm text-gray-500">Major: Computer Applications</p>
-            <p className="text-sm text-gray-500 mt-2">
+            <p className="text-sm text-gray-500 mb-4">Major: Computer Applications</p>
+            <p className="text-sm text-gray-600">
               A well-rounded degree in Computer Applications with a focus on programming, database management, software development, and web technologies. I gained a strong foundation in computing and problem-solving.
             </p>
           </div>
 
           {/* Plus Two (High School) */}
-          <div
-            className="bg-[#ffffff] text-[#2c3e50] p-6 rounded-lg  border-2 border-[#ff7f7f] hover:cursor-pointer transition duration-500 hover:bg-[#ffe6e6]"
-          >
-            <div className="flex items-center mb-4">
-              <FaSchool className="text-3xl mr-3 text-yellow-600" />
-              <h3 className="text-2xl font-semibold">Plus Two (Higher Secondary School)</h3>
+          <div className="bg-white w-2/3 m-auto p-6 rounded-lg shadow-md hover:shadow-2xl transition-all duration-300">
+            <div className="flex items-center mb-6">
+              <FaSchool className="text-4xl text-yellow-600 mr-4" />
+              <div>
+                <h3 className="text-2xl font-semibold text-gray-800">Plus Two (Higher Secondary School)</h3>
+                <p className="text-sm text-gray-500">Graduated: 2021</p>
+              </div>
             </div>
-            <p className="text-lg text-gray-600 mb-4">School</p>
-            <p className="text-sm text-gray-500">Graduated: 2021</p>
-            <p className="text-sm text-gray-500">Science Stream</p>
-            <p className="text-sm text-gray-500 mt-2">
-              Focused on the Science stream, with subjects such as Mathematics, Physics, and Bio-Science. 
+            <p className="text-sm text-gray-500 mb-4">Science Stream</p>
+            <p className="text-sm text-gray-600">
+              Focused on the Science stream, with subjects such as Mathematics, Physics, and Bio-Science.
             </p>
           </div>
         </div>

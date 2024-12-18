@@ -51,21 +51,21 @@ const About = () => {
               <img
                 src="images/me.jpg"
                 alt="Felix Mathew"
-                className="rounded-full bg-gray-100 bg-opacity-90 border-4 border-teal-400 w-48 h-48 object-cover object-top duration-300  md:w-64 md:h-64"
+                className="rounded-full bg-gray-100 bg-opacity-90 border-4 border-teal-400 w-48 h-48 object-cover  object-top duration-300  md:w-64 md:h-64"
               />
             </div>
           </div>
 
           {/* Contact Information */}
-          <div className="grid grid-cols-1 md:grid-cols-5 divide-x divide-slate-400 p-4 mt-6 space-y-4 md:space-y-0">
+          <div className="grid grid-cols-1 lg:grid-cols-5 sm:grid-cols-1 md:grid-cols-2  sm:divide-x-0 md:divide-x-0 lg:divide-x divide-slate-400 p-4 mt-6 ">
             {/* Email */}
-            <div className="flex justify-center pr-6">
-              <span className="text-teal-500">felixmathewtt@gmail.com</span>
+            <div className="flex justify-center">
+              <a href="mailto:felixmathewtt@gmail.com" className="text-teal-500">felixmathewtt@gmail.com</a>
             </div>
 
             {/* Phone Number */}
             <div className="flex justify-center">
-              <span className="text-teal-500">+919539215831</span>
+              <a href="tel:+919539215831" className="text-teal-500">+919539215831</a>
             </div>
 
             {/* Location */}
