@@ -16,7 +16,7 @@ const Skills = () => {
     { name: 'HTML', logo: '/images/html5.png', color: 'bg-orange-500' },
     { name: 'CSS', logo: '/images/css3.png', color: 'bg-blue-400' },
     { name: 'AWS', logo: '/images/aws.svg', color: 'bg-blue-500' },
-    { name: 'GitHub', logo: '/images/git.svg', color: 'bg-gray-400' },
+    { name: 'GitHub', logo: '/images/git.svg', color: 'bg-gray-400' }, 
     { name: 'SQL', logo: '/images/sql.png', color: 'bg-red-700' },
   ];
 
@@ -46,7 +46,7 @@ const Skills = () => {
     <section
       ref={sectionRef}
       id="skills"
-      className={`py-20 bg-gradient-to-r from-[#a1ffce] to-[#faffd1] h-full flex items-center text-gray-800 transition-opacity duration-1000 ${
+      className={`py-20 bg-gradient-to-r from-[#f0e7d8] to-[#d1f7ff] h-full flex items-center text-gray-800 transition-opacity duration-1000 ${
         isVisible ? 'opacity-100' : 'opacity-0'
       }`}
     >
@@ -63,26 +63,29 @@ const Skills = () => {
         </p>
 
         {/* Skills Grid */}
-        <div className="lg:w-3/5 sm:w-full md:w-full m-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-6">
+        <div className="lg:w-4/5 sm:w-full md:w-full m-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
           {skillsWithLogos.map((skill, index) => (
             <div
               key={index}
-              className={`skill-card text-white p-4 rounded-lg shadow-lg transform transition-transform duration-300 ease-in-out hover:scale-105 ${skill.color} ${
+              className={`skill-card text-white p-6 rounded-full shadow-lg  transition-all duration-300 ease-in-out hover:shadow-2xl hover:bg-opacity-90 ${skill.color} ${
                 isVisible ? 'skill-item visible' : 'skill-item'
               }`}
               style={{
-                animationDelay: `${index * 300}ms`, // Staggered fade-in delay
+                animationDelay: `${index * 200}ms`, // Staggered fade-in delay
                 opacity: isVisible ? 1 : 0, // Fade-in effect
-                transition: 'opacity 1s ease-in-out', // Smooth opacity transition
+                transition: 'opacity 1s ease-in-out, transform 0.4s ease', // Explicit transition on opacity and transform
               }}
             >
-              <div className="flex flex-col items-center justify-center h-full">
+              <div className="flex flex-col items-center justify-center group"> {/* Grouping the image and text together */}
                 <img
                   src={skill.logo}
                   alt={skill.name}
-                  className="w-16 h-16 sm:w-20 sm:h-20 mb-4" // Adjust logo size for different screens
+                  className="w-20 h-20 mb-4 transition-all duration-300 ease-in-out transform hover:rotate-12" // Icon rotation effect on hover
                 />
-                <h3 className="text-sm sm:text-md font-semibold">{skill.name}</h3>
+                <h3 className="text-md font-semibold mt-3  duration-500 transform transition-transform translate-y-4  group-hover:translate-y-0"> 
+                  {/* Fade-in text */}
+                  {skill.name}
+                </h3>
               </div>
             </div>
           ))}
