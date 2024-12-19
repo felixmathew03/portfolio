@@ -13,7 +13,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className={`py-20 bg-white text-gray-900 h-full flex flex-col items-center justify-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
+      className={`py-20  text-gray-900 h-full flex flex-col items-center justify-center transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-20'}`}
       style={{
         animation: isVisible ? 'fadeIn 1s ease-out forwards' : 'none', // Apply fade-in animation
       }}
@@ -46,12 +46,12 @@ const About = () => {
             </div>
 
             {/* Right Section: Profile Image and Contact Information */}
-            <div className="flex flex-col items-center space-y-6">
+            <div className="rounded-full border-4 border-teal-400 w-48 h-48 md:w-64 md:h-64 flex flex-col items-center space-y-6 overflow-hidden">
               {/* Profile Image */}
               <img
                 src="images/me.jpg"
                 alt="Felix Mathew"
-                className="rounded-full bg-gray-100 bg-opacity-90 border-4 border-teal-400 w-48 h-48 object-cover  object-top duration-300  md:w-64 md:h-64"
+                className=" bg-gray-100 bg-opacity-90  object-cover duration-500 transition-transform transform hover:scale-110  object-top duration-300  "
               />
             </div>
           </div>

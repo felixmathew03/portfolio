@@ -12,7 +12,8 @@ export default {
       },
       fontFamily: {
         sans: ['Roboto', 'sans-serif'],  // Custom font
-        ultra:["Oswald", "sans-serif"]
+        ultra:["Oswald", "sans-serif"],
+        abril:["Abril Fatface", "serif"]
       },
     },
   },

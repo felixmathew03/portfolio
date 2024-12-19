@@ -18,7 +18,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="bg-gradient-to-r from-[#70e1f5] to-[#ffd194] py-12 min-h-screen flex items-center"
+      className="py-12 min-h-screen border-t-2 border-inherit border-dashed flex items-center"
     >
       <div className="container mx-auto text-center">
         <h2 className="text-4xl font-bold text-gray-800 mb-8">My Projects</h2>
@@ -57,7 +57,7 @@ const Projects = () => {
           {/* Project 2 - OLX Clone (No React) */}
           <div
             ref={olxRef}
-            className={`flex flex-col lg:flex-row items-center w-11/12 ms-auto justify-between transition-all duration-500 ease-in-out ${
+            className={`flex flex-col-reverse lg:flex-row items-center w-11/12 ms-auto justify-between transition-all duration-500 ease-in-out ${
               olxInView ? 'animate-slideUp' : 'opacity-0'
             }`}
           >

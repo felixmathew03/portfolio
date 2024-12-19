@@ -29,7 +29,7 @@ const Header = () => {
   return (
     <header
       className={`${
-        isScrolled ? 'bg-transparent text-gray-900' : 'bg-gradient-to-r from-slate-900 to-slate-700 text-white'
+        isScrolled ? 'bg-transparent text-gray-900' : 'bg-gradient-to-r from-[#d8c4bd] to-[#89716e] text-white'
       } p-6 shadow-md sticky top-0 z-50 transition-all duration-300`}
     >
       <div className="container mx-auto flex justify-between items-center">

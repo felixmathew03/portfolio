@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useRef } from 'react';
 
 const Skills = () => {
-  const [isVisible, setIsVisible] = useState(false);
+  const [visibleSkills, setVisibleSkills] = useState([]);
   const sectionRef = useRef(null);
 
   // Skills with logos and unique colors
@@ -24,7 +24,12 @@ const Skills = () => {
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setIsVisible(true);
+          // Start displaying skills one by one
+          skillsWithLogos.forEach((skill, index) => {
+            setTimeout(() => {
+              setVisibleSkills((prev) => [...prev, skill]);
+            }, index * 300); // Staggered delay of 300ms
+          });
           observer.disconnect(); // Stop observing after the first intersection
         }
       },
@@ -46,9 +51,7 @@ const Skills = () => {
     <section
       ref={sectionRef}
       id="skills"
-      className={`py-20 bg-gradient-to-r from-[#f0e7d8] to-[#d1f7ff] h-full flex items-center text-gray-800 transition-opacity duration-1000 ${
-        isVisible ? 'opacity-100' : 'opacity-0'
-      }`}
+      className="py-20 border-t-2 border-inherit border-dashed flex items-center text-gray-800"
     >
       <div className="container mx-auto px-6 text-center">
         {/* Title */}
@@ -63,36 +66,33 @@ const Skills = () => {
         </p>
 
         {/* Skills Grid */}
-        <div className="lg:w-4/5 sm:w-full md:w-full m-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8">
-          {skillsWithLogos.map((skill, index) => (
+        <div className="lg:w-3/5 sm:w-full md:w-full m-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-8">
+          {visibleSkills.map((skill, index) => (
             <div
               key={index}
-              className={`skill-card text-white p-6 rounded-lg shadow-lg  transition-all duration-300 ease-in-out hover:shadow-2xl hover:bg-opacity-90 ${skill.color} ${
-                isVisible ? 'skill-item visible' : 'skill-item'
-              }`}
+              className={`skill-card text-white p-4  rounded-lg shadow-lg transition-all duration-300 ${skill.color} ease-in-out opacity-100 translate-y-0`}
               style={{
-                animationDelay: `${index * 200}ms`, // Staggered fade-in delay
-                opacity: isVisible ? 1 : 0, // Fade-in effect
-                transition: 'opacity 1s ease-in-out, transform 0.4s ease', // Explicit transition on opacity and transform
+                transition: 'opacity 0.5s ease-in-out, transform 0.5s ease-in-out',
+                opacity: 1,
+                transform: 'translateY(0)',
               }}
             >
-              <div className="flex flex-col items-center justify-center group"> {/* Grouping the image and text together */}
+              <div className="flex flex-col items-center justify-center group">
                 <img
                   src={skill.logo}
                   alt={skill.name}
-                  className="w-20 h-20 mb-4 transition-all duration-300 ease-in-out transform hover:rotate-12" // Icon rotation effect on hover
+                  className="w-20 h-20 mb-4 transition-transform duration-300 ease-in-out transform group-hover:rotate-12" // Icon rotation effect on hover
                 />
-                <h3 className="text-md font-semibold mt-3  duration-500 transform transition-transform translate-y-4  group-hover:translate-y-0"> 
-                  {/* Fade-in text */}
+                <h3 className="text-md font-semibold mt-3"> 
                   {skill.name}
                 </h3>
               </div>
             </div>
           ))}
         </div>
-      </div>
+      </div >
     </section>
   );
 };
 
-export default Skills;
+export default Skills; 
