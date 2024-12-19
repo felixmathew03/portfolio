@@ -1,7 +1,8 @@
 // src/components/TypingText.js
 import React, { useEffect, useState } from 'react';
 
-const TypingText = ({ text, typingSpeed = 100 }) => {
+const TypingText = ({ typingSpeed = 100 }) => {
+  const text="Felix Mathew";
   const [displayedText, setDisplayedText] = useState('');
 
   useEffect(() => {

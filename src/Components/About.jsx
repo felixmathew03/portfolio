@@ -25,7 +25,7 @@ const About = () => {
             <div className="flex flex-col items-center md:items-start w-full md:w-2/3 text-center md:text-left space-y-6">
               {/* Heading with typing animation */}
               <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-6">
-                Hi, I'm <span className="text-teal-500"><TypingText text="Felix Mathew" typingSpeed={300} /></span>
+                Hi, I'm <span className="text-teal-500"><TypingText  typingSpeed={300} /></span>
               </h2>
 
               {/* Additional description */}
