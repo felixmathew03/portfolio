@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import Para from './Para';
-import TypingText from './TypingText';
-
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
 
@@ -25,7 +23,7 @@ const About = () => {
             <div className="flex flex-col items-center md:items-start w-full md:w-2/3 text-center md:text-left space-y-6">
               {/* Heading with typing animation */}
               <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-6">
-                Hi, I'm <span className="text-teal-500"><TypingText text="Felix Mathew" typingSpeed={200} /></span>
+                Hi, I'm <span className="text-teal-500">Felix Mathew</span>
               </h2>
 
               {/* Additional description */}
