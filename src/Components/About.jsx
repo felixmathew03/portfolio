@@ -34,7 +34,7 @@ const About = () => {
               {/* Download CV Button */}
               <div>
                 <a
-                  href="/docs/felix.pdf" // The path to your PDF in the public directory
+                  href="/docs/FelixMathewCV.pdf" // The path to your PDF in the public directory
                   download // This attribute tells the browser to download the file
                   className="bg-teal-500 text-white p-3 rounded-lg shadow-lg hover:bg-teal-600 transition duration-300"
                 >
