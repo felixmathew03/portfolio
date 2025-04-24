@@ -1,26 +1,24 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-scroll';
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false); // Track scroll state
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
-  // Handle scroll event
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
-        setIsScrolled(true); // If scrolled down, set isScrolled to true
+        setIsScrolled(true);
       } else {
-        setIsScrolled(false); // If at the top, set isScrolled to false
+        setIsScrolled(false);
       }
     };
 
     window.addEventListener('scroll', handleScroll);
-
-    // Cleanup event listener on component unmount
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -39,34 +37,59 @@ const Header = () => {
         <nav className="hidden md:block">
           <ul className="flex space-x-8">
             <li>
-              <a href="#about" className="hover:text-yellow-400 transition-colors">
+              <Link
+                to="about"
+                smooth={true}
+                duration={500}
+                className="hover:text-yellow-400 transition-colors"
+              >
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#skills" className="hover:text-yellow-400 transition-colors">
+              <Link
+                to="skills"
+                smooth={true}
+                duration={500}
+                className="hover:text-yellow-400 transition-colors"
+              >
                 Skills
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#projects" className="hover:text-yellow-400 transition-colors">
+              <Link
+                to="projects"
+                smooth={true}
+                duration={500}
+                className="hover:text-yellow-400 transition-colors"
+              >
                 Projects
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#education" className="hover:text-yellow-400 transition-colors">
+              <Link
+                to="education"
+                smooth={true}
+                duration={500}
+                className="hover:text-yellow-400 transition-colors"
+              >
                 Education
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#contact" className="hover:text-yellow-400 transition-colors">
+              <Link
+                to="contact"
+                smooth={true}
+                duration={500}
+                className="hover:text-yellow-400 transition-colors"
+              >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
 
-        {/* Mobile Navigation (Hamburger Menu) */}
+        {/* Mobile Navigation */}
         <div className="md:hidden">
           <button onClick={toggleMobileMenu} className="text-white">
             <svg
@@ -92,29 +115,54 @@ const Header = () => {
         <div className="md:hidden bg-gray-800 p-4 mt-4">
           <ul className="space-y-4">
             <li>
-              <a href="#about" className="block text-white hover:text-yellow-400 transition-colors">
+              <Link
+                to="about"
+                smooth={true}
+                duration={500}
+                className="block text-white hover:text-yellow-400 transition-colors"
+              >
                 About
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#skills" className="hover:text-yellow-400 transition-colors">
+              <Link
+                to="skills"
+                smooth={true}
+                duration={500}
+                className="hover:text-yellow-400 transition-colors"
+              >
                 Skills
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#projects" className="block text-white hover:text-yellow-400 transition-colors">
+              <Link
+                to="projects"
+                smooth={true}
+                duration={500}
+                className="block text-white hover:text-yellow-400 transition-colors"
+              >
                 Projects
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#education" className="hover:text-yellow-400 transition-colors">
+              <Link
+                to="education"
+                smooth={true}
+                duration={500}
+                className="hover:text-yellow-400 transition-colors"
+              >
                 Education
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#contact" className="block text-white hover:text-yellow-400 transition-colors">
+              <Link
+                to="contact"
+                smooth={true}
+                duration={500}
+                className="block text-white hover:text-yellow-400 transition-colors"
+              >
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

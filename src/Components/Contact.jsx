@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer
       id="contact"
-      className="bg-teal-900 p-2 text-white"
+      className="bg-teal-600 p-2 text-white"
     >
       <div className="container mx-auto text-center">
         {/* Footer Heading with Smaller Size */}
@@ -14,7 +14,7 @@ const Footer = () => {
         </h2>
 
         {/* Footer Content with Horizontal Layout */}
-        <div className="flex justify-center gap-4 text-[#faffd1]">
+        <div className="flex justify-center gap-4 ">
           {/* Email Section */}
           <div className="flex  items-center gap-3">
           
