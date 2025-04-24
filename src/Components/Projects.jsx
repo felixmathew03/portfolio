@@ -35,8 +35,8 @@ const Projects = () => {
                 Chat App (CONVERSA)
               </h3>
               <p className="text-gray-900 mb-4 p-2  text-md">
-              A chat application built with the MERN stack, allowing users to register, log in, and exchange messages. Users can send and receive messages. The platform features user authentication, message history, and a simple, responsive design for easy navigation across devices.
-              </p>
+              A real-time chat application built with the MERN stack (MongoDB, Express, React, Node.js), enabling users to register, log in, and engage in one-on-one conversations. The app supports real-time messaging using Socket.IO, ensuring instant message delivery without the need to refresh. Users can send and receive messages in real time, view their message history, and manage conversations seamlessly. The platform includes secure user authentication, stores chat data in MongoDB, and features a clean, responsive design optimized for both desktop and mobile devices.
+               </p>
 
               <a
                 href="https://github.com/felixmathew03/instagram.git"
