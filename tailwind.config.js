@@ -18,7 +18,7 @@ export default {
       keyframes: {
         softGlow: {
           '0%, 100%': {
-            boxShadow: '0 0 10px rgba(42, 27, 109, 0.95), 0 0 20px rgb(23, 81, 92)',
+            boxShadow: '0 0 10px rgba(83, 83, 85, 0.95), 0 0 20px rgb(121, 122, 123)',
             transform: 'translateY(0px)',
           },
           '50%': {

@@ -1,2 +1,70 @@
 @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=Oswald:wght@200..700&family=Squada+One&family=Ultra&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=Oswald:wght@200..700&family=Squada+One&family=Ultra&display=swap');
+/* Keyframes stay the same */
+@keyframes moveTopLine {
+    0% {
+      left: -100%;
+      width: 0;
+    }
+    50% {
+      left: 0;
+      width: 20%;
+    }
+    100% {
+      left: 100%;
+      width: 20%;
+    }
+  }
+  
+  @keyframes moveBottomLine {
+    0% {
+      right: -100%;
+      width: 0;
+    }
+    50% {
+      right: 0;
+      width: 20%;
+    }
+    100% {
+      right: 100%;
+      width: 20%;
+    }
+  }
+  
+  /* Tapered glowing line */
+  .animate-horizontal-border::before,
+  .animate-horizontal-border::after {
+    content: "";
+    position: absolute;
+    height: 2px; /* Peak thickness at center */
+    width: 0;
+    background: linear-gradient(
+      to right,
+      transparent,
+      rgb(146, 147, 147),
+      transparent
+    );
+    /* box-shadow: 0 0 6px rgba(0, 128, 128, 0.7); glow */
+    pointer-events: none;
+  }
+  
+  /* Top line */
+  .animate-horizontal-border::before {
+    top: 0;
+    animation: moveTopLine 4s linear infinite;
+  }
+  
+  /* Bottom line */
+  .animate-horizontal-border::after {
+    bottom: 0;
+    animation: moveBottomLine 4s linear infinite;
+  }
+  
+  /* Container settings */
+  .relative {
+    position: relative;
+  }
+  
+  .overflow-hidden {
+    overflow: hidden;
+  }
+  

@@ -17,71 +17,75 @@ const About = () => {
       }}
     >
       <div className="container mx-auto px-6 flex flex-col items-center justify-center">
-        <div className="bg-gray-100 p-8 rounded-lg shadow-2xl hover:shadow-2xl w-full md:w-3/4">
-          <div className="flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0">
-            {/* Left Section: Content */}
-            <div className="flex flex-col items-center md:items-start w-full md:w-2/3 text-center md:text-left space-y-6">
-              {/* Heading with typing animation */}
-              <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-900 mb-6">
-                Hi, I'm <span className="text-teal-500">Felix Mathew</span>
-              </h2>
+      <div className="bg-black p-8 rounded-lg shadow-2xl hover:shadow-2xl w-full md:w-3/4 relative overflow-hidden">
+  {/* Animated border container */}
+  <div className="absolute inset-0  animate-horizontal-border"></div>
 
-              {/* Additional description */}
-              <div className="mb-6">
-                <Para />
-              </div>
+  <div className="flex flex-col md:flex-row items-center justify-between space-y-8 md:space-y-0">
+    {/* Left Section: Content */}
+    <div className="flex flex-col items-center md:items-start w-full md:w-2/3 text-center md:text-left space-y-6">
+      {/* Heading with typing animation */}
+      <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-200 mb-6">
+        Hi, I'm <span className="text-teal-500">Felix Mathew</span>
+      </h2>
 
-              {/* Download CV Button */}
-              <div>
-                <a
-                  href="/docs/FelixMathewCV.pdf" // The path to your PDF in the public directory
-                  download // This attribute tells the browser to download the file
-                  className="bg-teal-500 text-white p-3 rounded-lg shadow-lg hover:bg-teal-600 transition duration-300"
-                >
-                  Download CV
-                </a>
-              </div>
-            </div>
+      {/* Additional description */}
+      <div className="mb-6 text-gray-400">
+        <Para />
+      </div>
 
-            {/* Right Section: Profile Image and Contact Information */}
-            <div className="rounded-full border-4 border-teal-400 w-48 h-48 md:w-64 md:h-64 flex flex-col items-center space-y-6 overflow-hidden">
-              {/* Profile Image */}
-              <img
-                src="images/me.jpg"
-                alt="Felix Mathew"
-                className=" bg-gray-100 bg-opacity-90  object-cover duration-500 transition-transform transform hover:scale-110  object-top duration-300  "
-              />
-            </div>
-          </div>
+      {/* Download CV Button */}
+      <div>
+        <a
+          href="/docs/FelixMathewCV.pdf" // The path to your PDF in the public directory
+          download // This attribute tells the browser to download the file
+          className="bg-teal-500 text-white p-3 rounded-lg shadow-lg hover:bg-teal-600 transition duration-300"
+        >
+          Download CV
+        </a>
+      </div>
+    </div>
 
-          {/* Contact Information */}
-          <div className="grid grid-cols-1 lg:grid-cols-5 sm:grid-cols-1 md:grid-cols-2  sm:divide-x-0 md:divide-x-0 lg:divide-x divide-slate-400 p-4 mt-6 ">
-            {/* Email */}
-            <div className="flex justify-center">
-              <a href="mailto:felixmathewtt@gmail.com" className="text-teal-500">felixmathewtt@gmail.com</a>
-            </div>
+    {/* Right Section: Profile Image and Contact Information */}
+    <div className="rounded-full border-4 border-teal-400 w-48 h-48 md:w-64 md:h-64 flex flex-col items-center space-y-6 overflow-hidden">
+      {/* Profile Image */}
+      <img
+        src="images/me.jpg"
+        alt="Felix Mathew"
+        className="bg-gray-100 bg-opacity-90 object-cover duration-500 transition-transform transform hover:scale-110 object-top duration-300"
+      />
+    </div>
+  </div>
 
-            {/* Phone Number */}
-            <div className="flex justify-center">
-              <a href="tel:+919539215831" className="text-teal-500">+919539215831</a>
-            </div>
+  {/* Contact Information */}
+  <div className="grid grid-cols-1 lg:grid-cols-5 sm:grid-cols-1 md:grid-cols-2 sm:divide-x-0 md:divide-x-0 lg:divide-x divide-slate-400 p-4 mt-6">
+    {/* Email */}
+    <div className="flex justify-center">
+      <a href="mailto:felixmathewtt@gmail.com" className="text-teal-500">cc@gmail.com</a>
+    </div>
 
-            {/* Location */}
-            <div className="flex justify-center">
-              <span className="text-teal-500">Kerala, INDIA</span>
-            </div>
+    {/* Phone Number */}
+    <div className="flex justify-center">
+      <a href="tel:+919539215831" className="text-teal-500">+cc</a>
+    </div>
 
-            {/* Date of Birth (DOB) */}
-            <div className="flex justify-center">
-              <span className="text-teal-500">July 29, 2003</span>
-            </div>
+    {/* Location */}
+    <div className="flex justify-center">
+      <span className="text-teal-500">Kerala, INDIA</span>
+    </div>
 
-            {/* Gender */}
-            <div className="flex justify-center">
-              <span className="text-teal-500">Male</span>
-            </div>
-          </div>
-        </div>
+    {/* Date of Birth (DOB) */}
+    <div className="flex justify-center">
+      <span className="text-teal-500">July 29, cc</span>
+    </div>
+
+    {/* Gender */}
+    <div className="flex justify-center">
+      <span className="text-teal-500">Male</span>
+    </div>
+  </div>
+</div>
+
       </div>
     </section>
   );

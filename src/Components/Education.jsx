@@ -23,7 +23,7 @@ const Education = () => {
       style={animationStyle}
     >
       <div className="container flex justify-center lg:justify-around items-center px-6">
-        <div className="text-6xl font-abril leading-tight flex flex-col justify-center items-center lg:w-1/12 font-bold text-teal-950 mb-12 text-center border-r-4 border-neutral-900 pr-7 border-double">
+        <div className="text-6xl font-abril leading-tight flex flex-col justify-center items-center lg:w-1/12 font-bold text-teal-200 mb-12 text-center border-r-4 border-neutral-900 pr-7 border-double">
           <p>E</p>
           <p>D</p>
           <p>U</p>
