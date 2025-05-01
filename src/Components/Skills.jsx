@@ -55,41 +55,50 @@ const Skills = () => {
     >
       <div className="container mx-auto px-6 text-center">
         {/* Title */}
-        <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-800 mb-6">
+        <h2 className="text-4xl sm:text-5xl font-extrabold text-teal-300 mb-6">
           My Technical <span className="text-yellow-500">Skills</span>
         </h2>
 
         {/* Description */}
-        <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-gray-600">
+        <p className="text-lg md:text-xl max-w-3xl mx-auto mb-8 text-gray-200">
           As a Full-Stack Developer, I have hands-on experience with a wide range of technologies. 
           Below are some of the core technologies that I work with:
         </p>
 
-        {/* Skills Grid */}
-        <div className="lg:w-3/5 sm:w-full md:w-full m-auto grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-8">
-          {visibleSkills.map((skill, index) => (
-            <div
-              key={index}
-              className={`skill-card text-white p-4  rounded-lg shadow-lg transition-all duration-300 ${skill.color} ease-in-out opacity-100 translate-y-0`}
-              style={{
-                transition: 'opacity 0.5s ease-in-out, transform 0.5s ease-in-out',
-                opacity: 1,
-                transform: 'translateY(0)',
-              }}
-            >
-              <div className="flex flex-col items-center justify-center group">
-                <img
-                  src={skill.logo}
-                  alt={skill.name}
-                  className="w-20 h-20 mb-4 transition-transform duration-300 ease-in-out transform group-hover:rotate-12" // Icon rotation effect on hover
-                />
-                <h3 className="text-md font-semibold mt-3"> 
-                  {skill.name}
-                </h3>
-              </div>
+       {/* Skills Infinite Scroll */}
+<div className="overflow-hidden w-full py-8">
+  <div className="flex animate-scroll-x w-max">
+    {/* Duplicate the cards twice for looping */}
+    {[...Array(2)].map((_, i) => (
+      <div
+        key={i}
+        className="grid grid-cols-12 sm:grid-cols-12 lg:grid-cols-12 gap-8 mr-8"
+      >
+        {visibleSkills.map((skill, index) => (
+          <div
+            key={`${i}-${index}`}
+            className={`skill-card w-48 h-48 text-white rounded-lg flex flex-col items-center justify-center shadow-lg transition-all duration-300 ${skill.color} ease-in-out opacity-100 translate-y-0 animate-soft-glow backdrop-blur-md`}
+            style={{
+              transition: 'opacity 0.5s ease-in-out, transform 0.5s ease-in-out',
+              opacity: 1,
+              transform: 'translateY(0)',
+            }}
+          >
+            <div className=" flex flex-col items-center justify-center group">
+              <img
+                src={skill.logo}
+                alt={skill.name}
+                className="w-20 h-20 mb-4 transition-transform duration-300 ease-in-out transform group-hover:rotate-12"
+              />
+              <h3 className="text-md font-semibold mt-3">{skill.name}</h3>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
+      </div>
+    ))}
+  </div>
+</div>
+
       </div >
     </section>
   );
