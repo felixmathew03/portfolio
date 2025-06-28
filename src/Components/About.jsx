@@ -17,7 +17,7 @@ const About = () => {
       }}
     >
       <div className="container mx-auto px-6 flex flex-col items-center justify-center">
-      <div className="bg-black p-8 rounded-lg shadow-2xl hover:shadow-2xl w-full md:w-3/4 relative overflow-hidden">
+      <div className=" p-8 rounded-lg shadow-2xl hover:shadow-2xl w-full md:w-3/4 relative overflow-hidden">
   {/* Animated border container */}
   <div className="absolute inset-0  animate-horizontal-border"></div>
 

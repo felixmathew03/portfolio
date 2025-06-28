@@ -18,10 +18,10 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="py-12 min-h-screen border-t-2 border-inherit border-dashed flex items-center"
+      className="py-12 min-h-screen  flex items-center"
     >
       <div className="container mx-auto text-center">
-        <h2 className="text-4xl font-bold text-gray-800 mb-8">My Projects</h2>
+        <h2 className="text-4xl font-bold text-gray-400 mb-8">My Projects</h2>
         <div className="flex flex-col sm:flex-col md:flex-col lg:flex-col justify-center gap-24 items-center ">
           {/* Project 1 - Instagram Clone */}
           <div

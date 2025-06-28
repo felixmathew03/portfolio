@@ -51,7 +51,7 @@ const Skills = () => {
     <section
       ref={sectionRef}
       id="skills"
-      className="py-20 border-t-2 border-inherit border-dashed flex items-center text-gray-800"
+      className="py-20  border-inherit  flex items-center text-gray-800"
     >
       <div className="container mx-auto px-6 text-center">
         {/* Title */}
@@ -77,7 +77,7 @@ const Skills = () => {
         {visibleSkills.map((skill, index) => (
           <div
             key={`${i}-${index}`}
-            className={`skill-card w-48 h-48 text-white rounded-lg flex flex-col items-center justify-center shadow-lg transition-all duration-300 ${skill.color} ease-in-out opacity-100 translate-y-0 animate-soft-glow backdrop-blur-md`}
+            className={`skill-card w-48 h-48 text-white rounded-lg flex flex-col items-center justify-center shadow-lg transition-all duration-300 ${skill.color} ease-in-out opacity-100 translate-y-0  backdrop-blur-md`}
             style={{
               transition: 'opacity 0.5s ease-in-out, transform 0.5s ease-in-out',
               opacity: 1,

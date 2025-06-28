@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer
       id="contact"
-      className="bg-teal-600 p-2 text-white"
+      className=" p-2 text-white"
     >
       <div className="container mx-auto text-center">
         {/* Footer Heading with Smaller Size */}

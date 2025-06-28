@@ -27,8 +27,10 @@ const Header = () => {
   return (
     <header
       className={`${
-        isScrolled ? 'bg-slate-400 text-gray-800' : 'bg-gradient-to-r from-slate-600  to-slate-900 text-white'
-      } p-6 shadow-md sticky top-0 z-50 transition-all duration-300`}
+  isScrolled
+    ? 'p-4 md:p-2 text-white md:w-7/12 lg:w-7/12 mx-auto bg-gray-800 bg-opacity-70 md:top-2 md:rounded-xl'
+    : 'p-6 bg-gradient-to-r from-slate-600 to-slate-900 text-white w-full'
+} shadow-md sticky top-0 z-50 transition-all duration-500 ease-in-out`}
     >
       <div className="container mx-auto flex justify-between items-center">
         <h1 className="text-3xl font-bold font-ultra">PORTFOLIO</h1>
@@ -36,12 +38,12 @@ const Header = () => {
         {/* Desktop Navigation */}
         <nav className="hidden md:block">
           <ul className="flex space-x-8">
-            <li>
+            <li >
               <Link
                 to="about"
                 smooth={true}
                 duration={500}
-                className="hover:text-yellow-400 transition-colors"
+                className="hover:text-yellow-400 transition-colors cursor-pointer"
               >
                 About
               </Link>
@@ -51,7 +53,7 @@ const Header = () => {
                 to="skills"
                 smooth={true}
                 duration={500}
-                className="hover:text-yellow-400 transition-colors"
+                className="hover:text-yellow-400 transition-colors cursor-pointer" 
               >
                 Skills
               </Link>
@@ -61,7 +63,7 @@ const Header = () => {
                 to="projects"
                 smooth={true}
                 duration={500}
-                className="hover:text-yellow-400 transition-colors"
+                className="hover:text-yellow-400 transition-colors cursor-pointer"
               >
                 Projects
               </Link>
@@ -71,7 +73,7 @@ const Header = () => {
                 to="education"
                 smooth={true}
                 duration={500}
-                className="hover:text-yellow-400 transition-colors"
+                className="hover:text-yellow-400 transition-colors cursor-pointer"
               >
                 Education
               </Link>
@@ -81,7 +83,7 @@ const Header = () => {
                 to="contact"
                 smooth={true}
                 duration={500}
-                className="hover:text-yellow-400 transition-colors"
+                className="hover:text-yellow-400 transition-colors cursor-pointer"
               >
                 Contact
               </Link>

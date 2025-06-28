@@ -19,7 +19,7 @@ const Education = () => {
   return (
     <section
       id="education"
-      className="py-20 border-t-2 border-inherit border-dashed flex justify-center items-center text-gray-800 h-auto"
+      className="py-20  flex justify-center items-center text-gray-800 h-auto"
       style={animationStyle}
     >
       <div className="container flex justify-center lg:justify-around items-center px-6">
