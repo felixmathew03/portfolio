@@ -8,12 +8,12 @@ export default {
     darkMode: 'class',
     extend: {
       colors: {
-        primary: '#1D4ED8',  // Tailwind custom color
+        primary: '#1D4ED8',
       },
       fontFamily: {
-        sans: ['Roboto', 'sans-serif'],  // Custom font
-        ultra:["Oswald", "sans-serif"],
-        abril:["Abril Fatface", "serif"]
+        sans: ['Roboto', 'sans-serif'],
+        ultra: ['Oswald', 'sans-serif'],
+        abril: ['Abril Fatface', 'serif'],
       },
       keyframes: {
         softGlow: {
@@ -28,17 +28,8 @@ export default {
         },
         scrollX: {
           '0%': { transform: 'translateX(0)' },
-          '100%': { transform: 'translateX(-50%)' }, // Adjust based on content duplication
+          '100%': { transform: 'translateX(-50%)' },
         },
-      },
-      animation: {
-        'scroll-x': 'scrollX 30s linear infinite',
-      },
-      animation: {
-        'star-movement-bottom': 'star-movement-bottom linear infinite alternate',
-        'star-movement-top': 'star-movement-top linear infinite alternate',
-      },
-      keyframes: {
         'star-movement-bottom': {
           '0%': { transform: 'translate(0%, 0%)', opacity: '1' },
           '100%': { transform: 'translate(-100%, 0%)', opacity: '0' },
@@ -47,6 +38,17 @@ export default {
           '0%': { transform: 'translate(0%, 0%)', opacity: '1' },
           '100%': { transform: 'translate(100%, 0%)', opacity: '0' },
         },
+        rotateCube: {
+          '0%': { transform: 'rotateX(0deg) rotateY(0deg)' },
+          '100%': { transform: 'rotateX(360deg) rotateY(360deg)' },
+        },
+      },
+      animation: {
+        'soft-glow': 'softGlow 3s ease-in-out infinite',
+        'scroll-x': 'scrollX 30s linear infinite',
+        'star-movement-bottom': 'star-movement-bottom 10s linear infinite alternate',
+        'star-movement-top': 'star-movement-top 10s linear infinite alternate',
+        'rotate-cube': 'rotateCube 5s linear infinite',
       },
     },
   },

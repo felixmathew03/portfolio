@@ -11,83 +11,40 @@ const Header = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 0) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
+      setIsScrolled(window.scrollY > 0);
     };
-
     window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <header
-      className={`${
-  isScrolled
-    ? 'p-4 md:p-2 text-white md:w-7/12 lg:w-7/12 mx-auto bg-gray-800 bg-opacity-70 md:top-2 md:rounded-xl'
-    : 'p-6 bg-gradient-to-r from-slate-600 to-slate-900 text-white w-full'
-} shadow-md sticky top-0 z-50 transition-all duration-500 ease-in-out`}
+      className={`sticky top-0 z-50 transition-all duration-500 ease-in-out ${
+        isScrolled
+          ? 'bg-gray-900 bg-opacity-90 w-[92%] md:w-[80%] lg:w-[70%] mx-auto rounded-xl p-4 shadow-lg'
+          : 'w-full p-6 bg-gray-900'
+      }`}
     >
       <div className="container mx-auto flex justify-between items-center">
-        <h1 className="text-3xl font-bold font-ultra">PORTFOLIO</h1>
+        <h1 className="text-3xl font-bold font-ultra text-white tracking-wider">
+          PORTFOLIO
+        </h1>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:block">
-          <ul className="flex space-x-8">
-            <li >
-              <Link
-                to="about"
-                smooth={true}
-                duration={500}
-                className="hover:text-yellow-400 transition-colors cursor-pointer"
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="skills"
-                smooth={true}
-                duration={500}
-                className="hover:text-yellow-400 transition-colors cursor-pointer" 
-              >
-                Skills
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="projects"
-                smooth={true}
-                duration={500}
-                className="hover:text-yellow-400 transition-colors cursor-pointer"
-              >
-                Projects
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="education"
-                smooth={true}
-                duration={500}
-                className="hover:text-yellow-400 transition-colors cursor-pointer"
-              >
-                Education
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="contact"
-                smooth={true}
-                duration={500}
-                className="hover:text-yellow-400 transition-colors cursor-pointer"
-              >
-                Contact
-              </Link>
-            </li>
+          <ul className="flex space-x-6">
+            {['about', 'skills', 'projects', 'education', 'contact'].map((section) => (
+              <li key={section}>
+                <Link
+                  to={section}
+                  smooth={true}
+                  duration={500}
+                  className="text-white border border-[#14b8a6] hover:bg-[#14b8a6] hover:text-black py-1.5 px-4 rounded-lg transition-all cursor-pointer text-sm tracking-wide"
+                >
+                  {section.charAt(0).toUpperCase() + section.slice(1)}
+                </Link>
+              </li>
+            ))}
           </ul>
         </nav>
 
@@ -99,14 +56,9 @@ const Header = () => {
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
-              className="w-8 h-8"
+              className="w-7 h-7"
             >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16M4 18h16"
-              />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
           </button>
         </div>
@@ -114,58 +66,21 @@ const Header = () => {
 
       {/* Mobile Menu Dropdown */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-gray-800 p-4 mt-4">
-          <ul className="space-y-4">
-            <li>
-              <Link
-                to="about"
-                smooth={true}
-                duration={500}
-                className="block text-white hover:text-yellow-400 transition-colors"
-              >
-                About
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="skills"
-                smooth={true}
-                duration={500}
-                className="hover:text-yellow-400 transition-colors"
-              >
-                Skills
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="projects"
-                smooth={true}
-                duration={500}
-                className="block text-white hover:text-yellow-400 transition-colors"
-              >
-                Projects
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="education"
-                smooth={true}
-                duration={500}
-                className="hover:text-yellow-400 transition-colors"
-              >
-                Education
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="contact"
-                smooth={true}
-                duration={500}
-                className="block text-white hover:text-yellow-400 transition-colors"
-              >
-                Contact
-              </Link>
-            </li>
+        <div className="md:hidden bg-gray-900 p-4 mt-2 rounded-md">
+          <ul className="space-y-3 text-center">
+            {['about', 'skills', 'projects', 'education', 'contact'].map((section) => (
+              <li key={section}>
+                <Link
+                  to={section}
+                  smooth={true}
+                  duration={500}
+                  onClick={() => setIsMobileMenuOpen(false)}
+                  className="block text-white hover:text-[#14b8a6] text-md tracking-wide"
+                >
+                  {section.charAt(0).toUpperCase() + section.slice(1)}
+                </Link>
+              </li>
+            ))}
           </ul>
         </div>
       )}

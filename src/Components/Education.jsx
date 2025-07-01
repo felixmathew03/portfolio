@@ -1,93 +1,62 @@
-import React, { useEffect, useState } from 'react';
-import { FaLaptopCode, FaUniversity, FaSchool } from 'react-icons/fa'; // Importing React Icons
+import React, { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { FaLaptopCode, FaUniversity, FaSchool } from 'react-icons/fa';
+
+const educationData = [
+  {
+    icon: <FaLaptopCode className="text-[#14b8a6] text-4xl mb-4" />,
+    title: 'MERN Stack Course',
+    institution: 'Synnefo Solutions',
+    year: 'Completed: 2024',
+    description:
+      'Built full-stack apps using MongoDB, Express, React, Node. Real-time chat app, REST APIs & deployments included.',
+  },
+  {
+    icon: <FaUniversity className="text-[#14b8a6] text-4xl mb-4" />,
+    title: 'BCA - Bachelor of Computer Applications',
+    institution: 'Mahatma Gandhi University',
+    year: 'Graduated: 2024',
+    description:
+      'Studied core programming, DBMS, web development & data structures. Final project built with Django and PostgreSQL.',
+  },
+  {
+    icon: <FaSchool className="text-[#14b8a6] text-4xl mb-4" />,
+    title: 'Higher Secondary Education',
+    institution: 'St. George HSS, Aruvithura',
+    year: 'Graduated: 2021',
+    description:
+      'Completed Science stream with Math, Physics, and Biology. Focused on analytical problem solving and fundamentals.',
+  },
+];
 
 const Education = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  // Trigger opacity transition when the component mounts
   useEffect(() => {
-    setIsVisible(true);
+    AOS.init({ duration: 1000, once: true });
   }, []);
 
-  // Animation style object for the section
-  const animationStyle = {
-    opacity: isVisible ? 1 : 0,
-    transform: isVisible ? 'translateY(0)' : 'translateY(30px)',
-    transition: 'opacity 0.8s ease-out, transform 0.8s ease-out',
-  };
-
   return (
-    <section
-      id="education"
-      className="py-20  flex justify-center items-center text-gray-800 h-auto"
-      style={animationStyle}
-    >
-      <div className="container flex justify-center lg:justify-around items-center px-6">
-        <div className="text-6xl font-abril leading-tight flex flex-col justify-center items-center lg:w-1/12 font-bold text-teal-200 mb-12 text-center border-r-4 border-neutral-900 pr-7 border-double">
-          <p>E</p>
-          <p>D</p>
-          <p>U</p>
-          <p>C</p>
-          <p>A</p>
-          <p>T</p>
-          <p>I</p>
-          <p>O</p>
-          <p>N</p>
-        </div>
-        <div className="container w-full lg:w-8/12 px-6">
-          {/* Education Cards in Grid Layout */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-10">
-            {/* MERN Stack Course */}
-            <div className="bg-gray-100 transition-all hover:bg-white p-6 rounded-lg">
-              <div className="flex items-center mb-4">
-                <FaLaptopCode className="text-4xl text-blue-600 mr-4" />
-                <div>
-                  <h3 className="text-2xl font-semibold text-gray-800">MERN Stack Course</h3>
-                  <p className="text-sm text-gray-500">Completed: 2024</p>
-                  <p className="text-sm text-gray-500 font-semibold">Synnefo Solutions</p>
-                </div>
-              </div>
-              <p className="text-sm text-gray-500 mb-2">
-                Major: Full-Stack Development (MongoDB, Express.js, React, Node.js)
-              </p>
-              <p className="text-sm text-gray-600">
-                This intensive course covers everything from front-end to back-end development using the MERN stack. It is designed for aspiring developers looking to build modern web applications.
-              </p>
-            </div>
+    <section id="education" className="py-20 px-4 sm:px-10 lg:px-32 bg-black text-white">
+      <h2 className="text-5xl md:text-6xl font-bold font-abril text-center mb-20 text-[#6366f1  ]">
+        My <span className="text-[#14b8a6]">Education</span>
+      </h2>
 
-            {/* BCA (Bachelor of Computer Applications) */}
-            <div className="bg-gray-100 transition-all hover:bg-white p-6 rounded-lg">
-              <div className="flex items-center mb-4">
-                <FaUniversity className="text-4xl text-green-600 mr-4" />
-                <div>
-                  <h3 className="text-2xl font-semibold text-gray-800">Bachelor of Computer Applications (BCA)</h3>
-                  <p className="text-sm text-gray-500">Graduated: 2024</p>
-                  <p className="text-sm text-gray-500 font-semibold">Mahatma Gandhi University</p>
-                </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 place-items-center">
+        {educationData.map((item, index) => (
+          <div key={index} data-aos="zoom-in" className="flip-card">
+            <div className="flip-card-inner">
+              <div className="flip-card-front">
+                {item.icon}
+                <h3 className="text-xl font-semibold">{item.title}</h3>
+                <p className="text-sm text-[#ccc]">{item.institution}</p>
+                <p className="text-xs italic text-[#aaa]">{item.year}</p>
               </div>
-              <p className="text-sm text-gray-500 mb-2">Major: Computer Applications</p>
-              <p className="text-sm text-gray-600">
-                A well-rounded degree in Computer Applications with a focus on programming, database management, software development, and web technologies. I gained a strong foundation in computing and problem-solving.
-              </p>
-            </div>
-
-            {/* Plus Two (High School) */}
-            <div className="bg-gray-100 transition-all hover:bg-white p-6 rounded-lg">
-              <div className="flex items-center mb-4">
-                <FaSchool className="text-4xl text-yellow-600 mr-4" />
-                <div>
-                  <h3 className="text-2xl font-semibold text-gray-800">Higher Secondary School</h3>
-                  <p className="text-sm text-gray-500">Graduated: 2021</p>
-                  <p className="text-sm text-gray-500 font-semibold">St. Geroge Higher Secondary School, Aruvithura</p>
-                </div>
+              <div className="flip-card-back">
+                <p className="text-sm px-4">{item.description}</p>
               </div>
-              <p className="text-sm text-gray-500 mb-2">Science Stream</p>
-              <p className="text-sm text-gray-600">
-                Focused on the Science stream, with subjects such as Mathematics, Physics, and Bio-Science.
-              </p>
             </div>
           </div>
-        </div>
+        ))}
       </div>
     </section>
   );

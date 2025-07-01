@@ -1,3 +1,76 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Flip Card Container */
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  max-width: 320px;
+  height: 340px;
+  perspective: 1000px;
+  transition: transform 0.3s ease;
+}
+
+.flip-card:hover {
+  transform: scale(1.03) rotateZ(1deg);
+  box-shadow: 0 0 25px #14b8a670;
+}
+
+/* Inner 3D Wrapper */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+  box-shadow: 0 0 15px rgba(57, 99, 80, 0.4);
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Shared Front and Back Face Styles */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  border-radius: 1rem;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+/* Front Face */
+.flip-card-front {
+  background-color: rgba(51, 65, 85, 0.85); /* slate glass */
+  color: #f1f5f9;
+  border: 1px solid #14b8a6;
+}
+
+/* Back Face */
+.flip-card-back {
+  background: linear-gradient(135deg, #72fbe6, #096f6d);
+  color: white;
+  transform: rotateY(180deg);
+  border: 1px solid #7d0a00;
+}
+
+/* Smooth Fade-in Description on Back Face */
+.flip-card-back p {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.5s ease;
+}
+
+.flip-card:hover .flip-card-back p {
+  opacity: 1;
+  transform: translateY(0);
+}

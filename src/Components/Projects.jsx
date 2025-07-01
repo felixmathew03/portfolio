@@ -1,115 +1,84 @@
 import { useInView } from 'react-intersection-observer';
 
 const Projects = () => {
-  // Scroll-triggered animation for each project
-  const { ref: instagramRef, inView: instagramInView } = useInView({
-    triggerOnce: true,
-    threshold: 0.2,
-  });
-  const { ref: olxRef, inView: olxInView } = useInView({
-    triggerOnce: true,
-    threshold: 0.2,
-  });
-  const { ref: bookMyShowRef, inView: bookMyShowInView } = useInView({
-    triggerOnce: true,
-    threshold: 0.2,
-  });
+  const { ref: chatRef, inView: chatInView } = useInView({ triggerOnce: true, threshold: 0.2 });
+  const { ref: ecommerceRef, inView: ecommerceInView } = useInView({ triggerOnce: true, threshold: 0.2 });
+  const { ref: movieRef, inView: movieInView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
   return (
-    <section
-      id="projects"
-      className="py-12 min-h-screen  flex items-center"
-    >
-      <div className="container mx-auto text-center">
-        <h2 className="text-4xl font-bold text-gray-400 mb-8">My Projects</h2>
-        <div className="flex flex-col sm:flex-col md:flex-col lg:flex-col justify-center gap-24 items-center ">
-          {/* Project 1 - Instagram Clone */}
-          <div
-            ref={instagramRef}
-            className={` flex flex-col lg:flex-row items-center w-11/12 me-auto justify-between transition-all duration-500 ease-in-out ${
-              instagramInView ? 'animate-slideUp' : 'opacity-0'
-            }`}
-          >
-            <div className="  bg-gradient-to-r from-[#e5d9f2] to-[#f6f4f0] bg-opacity450 p-8 rounded-e-full lg:w-7/12 flex flex-col justify-center items-center transform translate-y-50 mb-6 lg:mb-0">
-              <h3 className="text-xl font-semibold bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] bg-clip-text text-transparent mb-2">
-                Chat App (CONVERSA)
-              </h3>
-              <p className="text-gray-900 mb-4 p-2  text-md">
-              A real-time chat application built with the MERN stack (MongoDB, Express, React, Node.js), enabling users to register, log in, and engage in one-on-one conversations. The app supports real-time messaging using Socket.IO, ensuring instant message delivery without the need to refresh. Users can send and receive messages in real time, view their message history, and manage conversations seamlessly. The platform includes secure user authentication, stores chat data in MongoDB, and features a clean, responsive design optimized for both desktop and mobile devices.
-               </p>
+    <section id="projects" className="py-20 min-h-screen bg-black text-white">
+      <div className="container mx-auto text-center px-4">
+        <h2 className="text-5xl font-bold text-[#14b8a6] mb-20 font-abril">
+          Featured <span className="text-[#6366f1]">Projects</span>
+        </h2>
 
+        <div className="flex flex-col gap-24">
+          {/* Project 1 */}
+          <div
+            ref={chatRef}
+            className={`flex flex-col-reverse lg:flex-row items-center justify-between w-full transition-all duration-700 ease-in-out px-4 md:px-12 ${chatInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
+          >
+            <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-8 shadow-xl lg:w-7/12">
+              <h3 className="text-2xl font-semibold text-[#facc15] mb-2">Chat App (CONVERSA)</h3>
+              <p className="text-gray-300 mb-4 text-md">
+                Real-time chat app using MERN stack with Socket.IO. Includes real-time messaging, secure auth, chat history, and responsive UI.
+              </p>
               <a
-                href="https://github.com/felixmathew03/instagram.git"
-                className="inline-block bg-gradient-to-r from-[#833ab4] via-[#fd1d1d] to-[#fcb045] text-white py-2 px-4 rounded-lg text-center"
-                target='_blank'
+                href="https://github.com/yourusername/conversa"
+                className="inline-block text-sm bg-[#14b8a6] hover:bg-[#0f766e] text-white py-2 px-5 rounded-xl transition-all"
+                target="_blank"
               >
                 View Project
               </a>
             </div>
-            <div className="relative w-full lg:w-96 h-full">
-              <img
-                src="images/socialmedia.jpg"
-                alt="Instagram Clone"
-                className="w-full h-full me-7 object-cover duration-300"
-              />
+            <div className="w-full lg:w-96 h-auto p-6">
+              <img src="/images/socialmedia.jpg" alt="Chat App" className="w-full h-full object-contain rounded-xl shadow-md" />
             </div>
           </div>
 
-          {/* Project 2 - OLX Clone (No React) */}
+          {/* Project 2 */}
           <div
-            ref={olxRef}
-            className={`flex flex-col-reverse lg:flex-row items-center w-11/12 ms-auto justify-between transition-all duration-500 ease-in-out ${
-              olxInView ? 'animate-slideUp' : 'opacity-0'
-            }`}
+            ref={ecommerceRef}
+            className={`flex flex-col lg:flex-row items-center justify-between w-full transition-all duration-700 ease-in-out px-4 md:px-12 ${ecommerceInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
           >
-            <div className="relative w-full lg:w-96 h-full mb-6 lg:mb-0">
-              <img
-                src="images/shop.jpg"
-                alt="ecommere Clone"
-                className="w-full h-full object-cover duration-300"
-              />
+            <div className="w-full lg:w-96 h-auto p-6">
+              <img src="/images/shop.jpg" alt="Ecommerce App" className="w-full h-full object-contain rounded-xl shadow-md" />
             </div>
-            <div className="bg-gradient-to-r from-[#e5d9f2] to-[#f6f4f0] bg-opacity450 p-8 rounded-s-full lg:w-7/12 flex flex-col justify-center items-center transform translate-y-50">
-              <h3 className="text-xl font-semibold text-blue-800 mb-2">Ecommerce (VENDORA)</h3>
-              <p className="text-gray-900 mb-4 p-2 text-md">
-              A MERN stack e-commerce web application with separate buyer and seller roles. Sellers can manage product listings, while buyers can browse, search, add items to a cart, and place orders. The platform features user authentication, real-time data handling, and a responsive user interface.
+            <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-8 shadow-xl lg:w-7/12">
+              <h3 className="text-2xl font-semibold text-[#3b82f6] mb-2">Ecommerce App (VENDORA)</h3>
+              <p className="text-gray-300 mb-4 text-md">
+                MERN-based e-commerce site with buyer/seller roles. Features include product CRUD, secure login, cart, and order management.
               </p>
               <a
-                href="https://github.com/felixmathew03/vendora.git"
-                className="inline-block bg-blue-800 text-white py-2 px-4 rounded-lg text-center"
-                target='_blank'
+                href="https://github.com/yourusername/vendora"
+                className="inline-block text-sm bg-[#3b82f6] hover:bg-blue-700 text-white py-2 px-5 rounded-xl transition-all"
+                target="_blank"
               >
                 View Project
               </a>
             </div>
           </div>
 
-          {/* Project 3 - BookMyShow Clone */}
+          {/* Project 3 */}
           <div
-            ref={bookMyShowRef}
-            className={`flex flex-col lg:flex-row items-center w-11/12 me-auto justify-between transition-all duration-500 ease-in-out ${
-              bookMyShowInView ? 'animate-slideUp' : 'opacity-0'
-            }`}
+            ref={movieRef}
+            className={`flex flex-col-reverse lg:flex-row items-center justify-between w-full transition-all duration-700 ease-in-out px-4 md:px-12 ${movieInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}
           >
-            <div className="bg-gradient-to-r from-[#e5d9f2] to-[#f6f4f0] bg-opacity450 p-8 rounded-e-full lg:w-7/12  flex flex-col justify-center items-center transform translate-y-50 mb-6 lg:mb-0">
-              <h3 className="text-xl font-semibold text-red-700 mb-2">BookMyShow Clone</h3>
-              <p className="text-gray-900 mb-4 p-2 text-md">
-                This is a clone of the BookMyShow platform, featuring a user-friendly interface. Users can browse and add movies, view detailed information about each movie, and explore showtimes. The platform is built with MongoDB, Node.js, Express, HTML, CSS, and JavaScript.
+            <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-3xl p-8 shadow-xl lg:w-7/12">
+              <h3 className="text-2xl font-semibold text-[#f87171] mb-2">BookMyShow Clone</h3>
+              <p className="text-gray-300 mb-4 text-md">
+                Movie booking site using MERN stack. Users can explore movies, view schedules, and book tickets with a clean and responsive layout.
               </p>
               <a
-                href="#"
-                className="inline-block bg-gradient-to-r from-slate-900 to-red-600 text-white py-2 px-4 rounded-lg text-center"
-                target='_blank'
+                href="https://github.com/yourusername/bookmyclone"
+                className="inline-block text-sm bg-[#ef4444] hover:bg-red-600 text-white py-2 px-5 rounded-xl transition-all"
+                target="_blank"
               >
                 View Project
               </a>
             </div>
-            <div className="relative w-full lg:w-96 h-full">
-              <img
-                src="images/film.jpg"
-                alt="BookMyShow Clone"
-                className="w-full h-full object-cover duration-300"
-              />
+            <div className="w-full lg:w-96 h-auto p-6">
+              <img src="/images/film.jpg" alt="Movie Booking App" className="w-full h-full object-contain rounded-xl shadow-md" />
             </div>
           </div>
         </div>

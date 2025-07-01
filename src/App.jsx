@@ -1,5 +1,8 @@
 import React from "react";
-import './App.css'
+import './App.css';
+import { useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import Header from "./Components/Header";
 import About from "./Components/About";
 import Skills from "./Components/Skills";
@@ -8,6 +11,10 @@ import Education from "./Components/Education";
 import Contact from "./Components/Contact";
 import DotGrid from "./Components/DotGrid";
 function App() {
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
     <div className="font-sans main relative bg-black">
       <DotGrid
