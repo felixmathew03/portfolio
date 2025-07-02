@@ -55,6 +55,9 @@ const DotGrid = ({
     lastY: 0,
   });
 
+  const shouldAnimateRef = useRef(true);
+  const idleTimerRef = useRef(null);
+
   const baseRgb = useMemo(() => hexToRgb(baseColor), [baseColor]);
   const activeRgb = useMemo(() => hexToRgb(activeColor), [activeColor]);
 
@@ -144,11 +147,18 @@ const DotGrid = ({
         ctx.restore();
       }
 
-      rafId = requestAnimationFrame(draw);
+      if (shouldAnimateRef.current) {
+        rafId = requestAnimationFrame(draw);
+      } else {
+        rafId = setTimeout(() => requestAnimationFrame(draw), 1000 / 10);
+      }
     };
 
     draw();
-    return () => cancelAnimationFrame(rafId);
+    return () => {
+      cancelAnimationFrame(rafId);
+      clearTimeout(rafId);
+    };
   }, [proximity, baseColor, activeRgb, baseRgb, circlePath]);
 
   useEffect(() => {
@@ -168,6 +178,12 @@ const DotGrid = ({
 
   useEffect(() => {
     const onMove = (e) => {
+      shouldAnimateRef.current = true;
+      clearTimeout(idleTimerRef.current);
+      idleTimerRef.current = setTimeout(() => {
+        shouldAnimateRef.current = false;
+      }, 2000);
+
       const now = performance.now();
       const pr = pointerRef.current;
       const dt = pr.lastTime ? now - pr.lastTime : 16;

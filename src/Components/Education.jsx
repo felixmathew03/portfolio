@@ -36,8 +36,11 @@ const Education = () => {
   }, []);
 
   return (
-    <section id="education" className="py-20 px-4 sm:px-10 lg:px-32 bg-black text-white">
-      <h2 className="text-5xl md:text-6xl font-bold font-abril text-center mb-20 text-[#6366f1  ]">
+    <section
+      id="education"
+      className="py-20 px-4 sm:px-10 lg:px-32 bg-black text-white"
+    >
+      <h2 className="text-5xl md:text-6xl font-bold font-abril text-center mb-20 text-[#6366f1]">
         My <span className="text-[#14b8a6]">Education</span>
       </h2>
 
@@ -45,14 +48,17 @@ const Education = () => {
         {educationData.map((item, index) => (
           <div key={index} data-aos="zoom-in" className="flip-card">
             <div className="flip-card-inner">
+              {/* Front */}
               <div className="flip-card-front">
                 {item.icon}
                 <h3 className="text-xl font-semibold">{item.title}</h3>
-                <p className="text-sm text-[#ccc]">{item.institution}</p>
-                <p className="text-xs italic text-[#aaa]">{item.year}</p>
+                <p className="text-sm text-slate-300">{item.institution}</p>
+                <p className="text-xs italic text-slate-400">{item.year}</p>
               </div>
+
+              {/* Back */}
               <div className="flip-card-back">
-                <p className="text-sm px-4">{item.description}</p>
+                <p>{item.description}</p>
               </div>
             </div>
           </div>
