@@ -18,24 +18,26 @@ function App() {
   return (
     <div className="font-sans main relative bg-black">
       <DotGrid
-    dotSize={2}
-    gap={20}
-    baseColor="#396350"
-    activeColor="#535966"
-    proximity={120}
-    shockRadius={250}
-    shockStrength={5}
-    resistance={750}
-    returnDuration={1.5}
-    style={{
-      position: 'absolute',
-      top: 0,
-      left: 0,
-      width: '100%',
-      height: '100%',
-      zIndex: 0, // Behind all content
-    }}
-  />
+  dotSize={2}
+  gap={20}
+  baseColor="#396350"
+  activeColor="#535966"
+  proximity={120}
+  shockRadius={250}
+  shockStrength={5}
+  resistance={750}
+  returnDuration={1.5}
+  style={{
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    zIndex: 0,
+  }}
+  className="hidden md:block"
+/>
+
       <Header />
       <About />
       <Skills/>

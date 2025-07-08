@@ -40,7 +40,7 @@ const Education = () => {
       id="education"
       className="py-20 px-4 sm:px-10 lg:px-32 bg-black text-white"
     >
-      <h2 className="text-5xl md:text-6xl font-bold font-abril text-center mb-20 text-[#6366f1]">
+      <h2 className="text-5xl md:text-6xl font-bold font-abril text-center mb-20 text-white">
         My <span className="text-[#14b8a6]">Education</span>
       </h2>
 

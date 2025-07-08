@@ -9,7 +9,7 @@ const Projects = () => {
     <section id="projects" className="py-20 min-h-screen bg-black text-white">
       <div className="container mx-auto text-center px-4">
         <h2 className="text-5xl font-bold text-[#14b8a6] mb-20 font-abril">
-          Featured <span className="text-[#6366f1]">Projects</span>
+          Featured <span className="text-white">Projects</span>
         </h2>
 
         <div className="flex flex-col gap-24">

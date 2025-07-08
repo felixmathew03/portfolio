@@ -25,7 +25,7 @@ const Footer = () => {
   return (
     <footer
       id="contact"
-      className=" text-white py-16 px-6 border-t border-white/10"
+      className="text-white py-16 px-6 border-t border-white/10"
     >
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 items-start">
         {/* Contact Form */}
@@ -36,9 +36,11 @@ const Footer = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="bg-white/5 backdrop-blur-md p-6 rounded-xl shadow-lg space-y-4 w-full"
+          className="bg-white/5 backdrop-blur-md p-6 rounded-xl shadow-lg space-y-4 w-full z-2 relative"
         >
-          <h2 className="text-3xl font-bold text-[#14b8a6] mb-2 font-abril">Let’s Connect</h2>
+          <h2 className="text-3xl font-bold text-[#14b8a6] mb-2 font-abril">
+            Let’s Connect
+          </h2>
           <input
             type="text"
             name="user_name"
@@ -66,7 +68,9 @@ const Footer = () => {
           >
             Send Message
           </button>
-          {message && <p className="text-xs text-center pt-2 text-green-400">{message}</p>}
+          {message && (
+            <p className="text-xs text-center pt-2 text-green-400">{message}</p>
+          )}
         </motion.form>
 
         {/* Info + Links */}
@@ -75,30 +79,36 @@ const Footer = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="flex flex-col justify-between h-full"
+          className="flex flex-col justify-start space-y-6 h-full z-10 relative"
         >
           <div>
-            <h3 className="text-2xl font-bold text-[#14b8a6] mb-4">Quick Links</h3>
+            <h3 className="text-2xl font-bold text-[#14b8a6] mb-4">
+              Quick Links
+            </h3>
             <ul className="space-y-2 text-gray-300 text-sm mb-6">
-              {["Home", "About", "Projects", "Skills", "Education"].map((item, index) => (
-                <li key={index}>
-                  <a
-                    href={`#${item.toLowerCase()}`}
-                    className="hover:text-[#14b8a6] transition"
-                  >
-                    {item}
-                  </a>
-                </li>
-              ))}
+              {["Home", "About", "Projects", "Skills", "Education"].map(
+                (item, index) => (
+                  <li key={index}>
+                    <a
+                      href={`#${item.toLowerCase()}`}
+                      className="hover:text-[#14b8a6] transition"
+                    >
+                      {item}
+                    </a>
+                  </li>
+                )
+              )}
             </ul>
 
-            <h3 className="text-xl font-bold text-white mt-8 mb-3">Connect with me</h3>
-            <div className="flex gap-5 text-xl text-gray-300">
+            <h3 className="text-xl font-bold text-white mt-8 mb-3">
+              Connect with me
+            </h3>
+            <div className="flex flex-wrap gap-5 text-xl text-gray-300 z-10 relative">
               {[
-                { icon: <FaEnvelope />, href: "mailto:yourmail@gmail.com" },
-                { icon: <FaGithub />, href: "https://github.com/yourusername" },
-                { icon: <FaLinkedin />, href: "https://linkedin.com/in/yourusername" },
-                { icon: <FaPhone className="rotate-90" />, href: "tel:+911234567890" },
+                { icon: <FaEnvelope />, href: "mailto:felixmathewtt@gmail.com" },
+                { icon: <FaGithub />, href: "https://github.com/felixmathew03" },
+                { icon: <FaLinkedin />, href: "https://linkedin.com/in/felixmathew03" },
+                { icon: <FaPhone className="rotate-90" />, href: "tel:+919539215831" },
               ].map((item, index) => (
                 <a
                   key={index}
@@ -122,7 +132,9 @@ const Footer = () => {
 
       {/* Bottom */}
       <div className="mt-16 text-center text-sm text-gray-500">
-        © {new Date().getFullYear()} <span className="text-white font-medium">Felix</span>. All rights reserved.
+        © {new Date().getFullYear()}{" "}
+        <span className="text-white font-medium">Felix</span>. All rights
+        reserved.
       </div>
     </footer>
   );

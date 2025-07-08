@@ -61,12 +61,12 @@ const About = () => {
   <div className="grid grid-cols-1 lg:grid-cols-5 sm:grid-cols-1 md:grid-cols-2 sm:divide-x-0 md:divide-x-0 lg:divide-x divide-slate-400 p-4 mt-6">
     {/* Email */}
     <div className="flex justify-center">
-      <a href="mailto:felixmathewtt@gmail.com" className="text-teal-500">cc@gmail.com</a>
+      <a href="mailto:felixmathewtt@gmail.com" className="text-teal-500">felixmathewtt@gmail.com</a>
     </div>
 
     {/* Phone Number */}
     <div className="flex justify-center">
-      <a href="tel:+919539215831" className="text-teal-500">+cc</a>
+      <a href="tel:+919539215831" className="text-teal-500">+919539215831</a>
     </div>
 
     {/* Location */}
@@ -76,7 +76,7 @@ const About = () => {
 
     {/* Date of Birth (DOB) */}
     <div className="flex justify-center">
-      <span className="text-teal-500">July 29, cc</span>
+      <span className="text-teal-500">July 29, 2003</span>
     </div>
 
     {/* Gender */}
