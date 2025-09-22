@@ -50,13 +50,13 @@
   /* Top line */
   .animate-horizontal-border::before {
     top: 0;
-    animation: moveTopLine 4s linear infinite;
+    animation: moveTopLine 2s linear infinite;
   }
   
   /* Bottom line */
   .animate-horizontal-border::after {
     bottom: 0;
-    animation: moveBottomLine 4s linear infinite;
+    animation: moveBottomLine 2s linear infinite;
   }
   
   /* Container settings */

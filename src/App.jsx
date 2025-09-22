@@ -18,8 +18,8 @@ function App() {
   return (
     <div className="font-sans main relative bg-black">
       <DotGrid
-  dotSize={2}
-  gap={20}
+  dotSize={3}
+  gap={25}
   baseColor="#396350"
   activeColor="#535966"
   proximity={120}

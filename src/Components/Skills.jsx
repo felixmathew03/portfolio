@@ -143,8 +143,8 @@ const Skills = () => {
                     whileHover={{ scale: 1.15, rotate: 5, y: -5 }}
                     whileTap={{ scale: 1.05 }}
                   > 
-                    <Icon className="w-12 h-12 mb-2 text-teal-500" />
-                    <span className="text-teal-500 text-sm font-semibold text-center">
+                    <Icon className="w-12 h-12 mb-2 text-teal-100" />
+                    <span className="text-slate-300 text-sm font-semibold text-center">
                       {skill.name}
                     </span>
                   </motion.div>
