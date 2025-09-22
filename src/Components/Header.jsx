@@ -56,10 +56,10 @@ const Header = () => {
                   spy={true}
                   offset={-80}
                   onSetActive={() => setActiveSection(section)}
-                  className={`text-sm tracking-wide py-1.5 px-4 rounded-lg transition-all duration-300 cursor-pointer ${
+                  className={`text-sm tracking-wide py-1.5 px-4 rounded-lg transition-all duration-600 cursor-pointer ${
                     activeSection === section
-                      ? 'bg-teal-500 text-black font-semibold'
-                      : 'text-white border border-teal-500 hover:bg-teal-500 hover:text-black'
+                      ? ' text-white font-semibold'
+                      : 'text-teal-400  hover:bg-teal-500 hover:text-black'
                   }`}
                 >
                   {section.charAt(0).toUpperCase() + section.slice(1)}

@@ -10,6 +10,10 @@ export default {
       colors: {
         primary: '#1D4ED8',
       },
+      boxShadow: {
+        glow: "0 0 15px rgba(20,184,166,0.3), 0 0 30px rgba(20,184,166,0.2)",
+        glowHover: "0 0 20px rgba(99,102,241,0.5), 0 0 40px rgba(99,102,241,0.3)",
+      },
       fontFamily: {
         sans: ['Roboto', 'sans-serif'],
         ultra: ['Oswald', 'sans-serif'],

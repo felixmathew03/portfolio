@@ -35,12 +35,12 @@
   .animate-horizontal-border::after {
     content: "";
     position: absolute;
-    height: 2px; /* Peak thickness at center */
+    height: 1px; /* Peak thickness at center */
     width: 0;
     background: linear-gradient(
       to right,
       transparent,
-      rgb(146, 147, 147),
+      #14B8A6,
       transparent
     );
     /* box-shadow: 0 0 6px rgba(0, 128, 128, 0.7); glow */
