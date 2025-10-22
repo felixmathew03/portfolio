@@ -37,7 +37,7 @@ const Header = () => {
     <header
       className={`sticky top-0 z-50 transition-all duration-500 ease-in-out ${
         isScrolled
-          ? 'bg-gray-900 bg-opacity-90   mx-auto rounded-xl shadow-lg'
+          ? 'bg-gray-900 bg-opacity-50   mx-auto  shadow-lg'
           : 'w-full bg-gray-900'
       }`}
     >
@@ -81,7 +81,7 @@ const Header = () => {
 
       {/* Mobile Dropdown */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-gray-900 px-6 pb-4">
+        <div className="md:hidden bg-gray-900 bg-opacity-20 px-6 pb-4">
           <ul className="space-y-3 text-center">
             {sections.map((section) => (
               <li key={section}>
@@ -112,7 +112,7 @@ const Header = () => {
       {/* Scroll Progress Bar */}
       <div className="h-1 w-full bg-transparent relative overflow-hidden rounded-b-xl">
         <div
-          className="h-full bg-teal-500 transition-all duration-200 ease-out"
+          className="h-full bg-teal-800 transition-all duration-200 ease-out"
           style={{ width: `${scrollProgress}%` }}
         ></div>
       </div>
